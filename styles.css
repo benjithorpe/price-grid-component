@@ -1,0 +1,106 @@
+*, *::after, ::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{font-size: 62.5%;}
+body{
+  height: 100vh;
+  background-color: #e5eff5;
+  padding: 5em 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  border-radius: 5px;
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  box-shadow: 2px 2px 50px 20px #d5e3eb;
+  font-family: 'Karla', sans-serif;
+}
+
+section{
+  padding: 1.5em;
+  font-size: 1.5rem;
+}
+
+section h2{
+  font-size: 1.6rem;
+  margin: 1em 0;
+  color: #fff;
+}
+
+section p{
+  line-height: 1.6;
+  color: #e5eff5
+}
+
+.join{ background-color: #fff; }
+.join p{ color: #a2abb1; }
+
+/* first paragraph in the join section */
+p.guarantee{
+  color: #bfdf32;
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+.join h2{ color: #2ab2af; }
+.subscribe{ background-color: #2ab2af; }
+
+.price{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subscribe button{
+  font-weight: bold;
+  color: #fff;
+  margin-top: 2em;
+  border-radius: 3px;
+  width: 90%;
+  border: none;
+  padding: .9em 1em;
+  background-color: #bfdf32;
+  font-family: 'Karla', sans-serif;
+  cursor: pointer;
+}
+
+.why-us{ background-color: #4abebd; }
+.why-us p{
+  font-size: 1.3rem;
+  line-height: 1.55;
+}
+
+
+@media screen and (min-width: 375px){
+  main{ width: 80%; }
+}
+
+@media screen and (min-width: 576px){
+  main{ width: 70%; }
+  .subscribe button{ width: 90%; }
+}
+
+@media screen and (min-width: 768px){
+  main{
+    display: grid;
+    grid-template-areas: "join join"
+                         "subscribe why";
+    width: 65%;
+  }
+
+  section{
+    padding: 2.5em;
+    font-size: 1.5rem;
+  }
+
+  .join{ grid-area: join; }
+  .subscribe{ grid-area: subscribe; }
+  .subscribe button:hover{ background-color: #b4d134; }
+  .why-us{ grid-area: why; }
+}
